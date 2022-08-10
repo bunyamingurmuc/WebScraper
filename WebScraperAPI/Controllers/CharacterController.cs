@@ -26,10 +26,12 @@ namespace WebScraperAPI.Controllers
                     name = name,
                     imageUrl=node.QuerySelector("tr td div img")
                     .GetAttributeValue("data-src",""),
-                    descriptionUrl=$"https://attackontitan.fandom.com/wiki/{name.Replace(" ","_")}_(Anime)"
+                    descriptionUrl=$"https://attackontitan.fandom.com/wiki/{name.Replace(" ","_")}_(Anime)",
+                    
                 };
             });
             return Ok(data);
+            Console.WriteLine("dedede");
         }
         [HttpGet]
         [Route("/[controller]/[action]")]
