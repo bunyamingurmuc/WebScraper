@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebScraperAPI.Context;
 
@@ -11,9 +12,10 @@ using WebScraperAPI.Context;
 namespace WebScraperAPI.Migrations
 {
     [DbContext(typeof(ScrapperContext))]
-    partial class ScrapperContextModelSnapshot : ModelSnapshot
+    [Migration("20220812080713_deneme5")]
+    partial class deneme5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,7 +70,7 @@ namespace WebScraperAPI.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Filters");
+                    b.ToTable("Filter");
                 });
 
             modelBuilder.Entity("WebScraperAPI.Model.Category", b =>
