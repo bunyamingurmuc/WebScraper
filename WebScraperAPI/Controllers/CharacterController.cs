@@ -6,6 +6,8 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace WebScraperAPI.Controllers
 {
+    String.Format("{0:n}", 1234);
+
     [ApiController]
     [Route("[controller]")]
     public class CharacterController : ControllerBase
